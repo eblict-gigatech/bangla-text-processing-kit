@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=42", "wheel", "Cython>=0.29.36", "numpy"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bkit"
+version = "0.1.0"
+authors = [
+  { name="banglagov", email="manage.bangla@gmail.com" },
+]
+description = "A python tool for Bangla text processing"
+readme = "README.md"
+requires-python = ">=3.7, <3.12"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+  "regex",
+  "gdown>=5.0,<6.0",
+  "transformers==4.28.0",
+  "sentencepiece>=0.2,<0.3",
+  "onnxruntime>=1.20,<2.0",
+  "spacy>=3.8,<4.0",
+  "datasets>=2.14,<3.0",
+  "pyhocon",
+  "numpy>=1.26,<3.0",
+  "segtok",
+  "gensim>=4.3,<5.0",
+  "huggingface_hub>=0.20,<1.0",
+]
+
+
+keywords = ['bkit', 'bangla kit', 'bangla text processing', 'banpipeline', 'ner', 'pos', 'shallow parsing', 'dependency parsing', 'bangla normalization', 'bangla lemmatization']
+
+[project.optional-dependencies]
+lemma = ["bnlp-toolkit"]
+
+all = [
+  "torch>=2.0,<2.7"
+]
+
+
+[project.urls]
+"Homepage" = "https://github.com/giga-tech/bangla-text-processing-kit"
+
+[tool.setuptools.packages.find]
+where = ["."]
+
+[tool.setuptools.package-data]
+bkit = ["lemmatizer/data/*", "lemmatizer/data/*/*", "shallow/_models/chart_helper.pyx", "stemmer/data/*"]
