@@ -59,22 +59,33 @@
 
 ### Installing<a id="installing"></a>
 
-There are three installation options of the bkit package. These are:
 
-1. `bkit`: The most basic version of bkit with the normalization, cleaning and tokenization capabilities.
+- Python **3.10** (recommended for best stability and compatibility)
+
+---
+
+#### Install from GitHub (Recommended)
+
+To install the latest version of the Bangla Text Processing Kit directly from GitHub:
+
+```bash
+pip install git+https://github.com/eblict-gigatech/bangla-text-processing-kit.git
+```
+
+#### From PYPI (Not recommended for now)
+
+pypi version might be unstable since it is updated from time to time and takes longer time to update
 
 ```bash
 pip install bkit
 ```
-2. `bkit[lemma]`: Everything in the basic version plus lemmatization capability.
 
+#### Additional Dependency (Lemmatizer Support)
+
+If you plan to use the lemmatizer, install the required extension:
 ```bash
-pip install bkit[lemma]
+pip install bnlp-toolkit
 ```
-3. `bkit[all]`: Everything that are available in bkit including normalization, cleaning, tokenization, lemmatization, NER, POS and shallow parsing. 
-
-```bash
-pip install bkit[all]
 ```
 
 ### Checking text<a id="checking-text"></a>
