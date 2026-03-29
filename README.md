@@ -2,7 +2,7 @@
 ![PyTorch 2.6](https://img.shields.io/badge/pytorch-2.6-red)
 
 
-![BKIT Logo](media/bkit_banner.png)
+![Logo](https://github.com/eblict-gigatech/bangla-text-processing-kit/raw/main/media/bkit_banner.png)
 
 **Bangla Text Processing Kit (Bkit)** is a comprehensive Python toolkit for Bangla NLP. It provides robust tools for text normalization, cleaning, tokenization, lemmatization, stemming, parts-of-speech tagging, named entity recognition, dependency parsing, and coreference resolution. Bkit also offers intuitive visualizations to explore text structure and linguistic patterns, making it easy for researchers, developers, and educators to analyze and process Bangla text efficiently.
 
@@ -64,28 +64,33 @@
 
 ---
 
-#### Install from GitHub (Recommended)
+#### From PYPI (Stable)
+
+pypi version might be unstable since it is updated from time to time and takes longer time to update
+
+```bash
+pip install bkit-alter
+```
+
+#### Additional Dependency
+
+If you plan to use the lemmatizer, install the required extension:
+```bash
+pip install bkit-alter[lemma]
+```
+
+If you want to install all including pytorch, install the required extension:
+
+```bash
+pip install bkit-alter[all]
+```
+
+#### Install from GitHub (Not Stable)
 
 To install the latest version of the Bangla Text Processing Kit directly from GitHub:
 
 ```bash
 pip install git+https://github.com/eblict-gigatech/bangla-text-processing-kit.git
-```
-
-#### From PYPI (Not recommended for now)
-
-pypi version might be unstable since it is updated from time to time and takes longer time to update
-
-```bash
-pip install bkit
-```
-
-#### Additional Dependency (Lemmatizer Support)
-
-If you plan to use the lemmatizer, install the required extension:
-```bash
-pip install bnlp-toolkit
-```
 ```
 
 ### Checking text<a id="checking-text"></a>
@@ -733,7 +738,6 @@ coref.visualize(predictions)
 ```
 
 [![coref.png](https://i.postimg.cc/26W5TbBb/coref.png)](https://postimg.cc/cgsZLJh0)
-
 
 
 
