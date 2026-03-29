@@ -1,12 +1,15 @@
+[bdist_wheel]
+universal = 1
+
 [build-system]
 requires = ["setuptools>=42", "wheel", "Cython>=0.29.36", "numpy"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "bkit"
-version = "0.1.0"
+name = "bkit-alter"
+version = "1.0.2"
 authors = [
-  { name="banglagov", email="manage.bangla@gmail.com" },
+  { name="banglagov", email="manage.bangla@gmail.com" }
 ]
 description = "A python tool for Bangla text processing"
 readme = "README.md"
@@ -40,7 +43,7 @@ dependencies = [
 keywords = ['bkit', 'bangla kit', 'bangla text processing', 'banpipeline', 'ner', 'pos', 'shallow parsing', 'dependency parsing', 'bangla normalization', 'bangla lemmatization']
 
 [project.optional-dependencies]
-lemma = ["bnlp-toolkit"]
+lemma = ["bnlp-toolkit==4.0.3"]
 
 all = [
   "torch>=2.0,<2.7"
@@ -48,7 +51,7 @@ all = [
 
 
 [project.urls]
-"Homepage" = "https://github.com/giga-tech/bangla-text-processing-kit"
+"Homepage" = "https://github.com/eblict-gigatech/bangla-text-processing-kit.git"
 
 [tool.setuptools.packages.find]
 where = ["."]
